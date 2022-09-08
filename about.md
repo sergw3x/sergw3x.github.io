@@ -4,12 +4,20 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+This is my small blog
 
-### More Information
+### Skils
 
-A place to include any other types of information that you'd like to include about yourself.
+PHP
+Golang
+Java
+C & C++
+js SASS
+Postgres mysql Redis
+Memcache RabbitMQ
+Linux
+and others ...
 
 ### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+[twitter](https://www.twitter.com/sergw3x)
+[email](mailto:sergw3x@gmail.com)
