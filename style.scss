@@ -301,3 +301,42 @@ footer {
   font-weight: normal;
   font-style: italic;
 }
+
+header{
+  .site-header,.container-description{
+    display: flex;
+    justify-content: space-between;
+  }
+  .container-description{
+    margin-top: 5px;
+  }
+  .search-container{
+    input {
+      height: 4rem;
+      font-family: 'Lato', sans-serif;
+      border: 0;
+      color: #2f2f2f;
+      font-size: 1.8rem;
+    }
+    input[type="search"] {
+      outline: 0; // <-- shold probably remove this for better accessibility, adding for demo aesthetics for now.
+      width: 100%;
+      background: #fff;
+      padding: 0 1.6rem;
+      border-radius: .7rem;
+      appearance: none; //for iOS input[type="search"] roundedness issue. border-radius alone doesn't work
+      transition: all .3s cubic-bezier(0, 0, 0.43, 1.49);
+      transition-property: width, border-radius;
+      z-index: 1;
+      position: relative;
+    }
+
+    input:not(:placeholder-shown) {
+      border-radius: .7rem 0 0 .7rem;
+      width: calc(100% - 6rem);
+      + button {
+        display: block;
+      }
+    }
+  }
+}
