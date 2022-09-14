@@ -18,7 +18,7 @@ html {
 }
 
 body {
-	background: $white;
+  background: $white;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
 }
@@ -46,6 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 30px;
+
   a {
     color: inherit;
   }
@@ -71,7 +72,8 @@ p {
 a {
   color: $blue;
   text-decoration: none;
-	cursor: pointer;
+  cursor: pointer;
+
   &:hover, &:active {
     color: $blue;
   }
@@ -125,6 +127,7 @@ img {
   color: $black;
   background: $lightGray;
 }
+
 ::selection {
   color: $black;
   background: $lightGray;
@@ -134,12 +137,12 @@ img {
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 /*********************/
@@ -288,29 +291,34 @@ footer {
 @import "highlights";
 @import "svg-icons";
 
-.StandWithUkraine_banner_link{
-    display: block;
-    text-align: center;
+.StandWithUkraine_banner_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.StandWithUkraine_banner_image{
-    width: 50%;
+
+.StandWithUkraine_banner_image {
+  //width: 50%;
 }
-.post h1 .date{
+
+.post h1 .date {
   display: block;
   font-size: .8rem;
   font-weight: normal;
   font-style: italic;
 }
 
-header{
-  .site-header,.container-description{
+header {
+  .site-header, .container-description {
     display: flex;
     justify-content: space-between;
   }
-  .container-description{
+
+  .container-description {
     margin-top: 5px;
   }
-  .search-container{
+
+  .search-container {
     input {
       height: 4rem;
       font-family: 'Lato', sans-serif;
@@ -318,6 +326,7 @@ header{
       color: #2f2f2f;
       font-size: 1.8rem;
     }
+
     input[type="search"] {
       outline: 0; // <-- shold probably remove this for better accessibility, adding for demo aesthetics for now.
       width: 100%;
@@ -334,9 +343,157 @@ header{
     input:not(:placeholder-shown) {
       border-radius: .7rem 0 0 .7rem;
       width: calc(100% - 6rem);
+
       + button {
         display: block;
       }
     }
+
+    #results-container {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        padding: 10px;
+        margin: 5px;
+      }
+    }
   }
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .wrapper-footer{
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+  }
+  .wrapper-masthead{
+    margin-bottom: 15px;
+  }
+  footer{
+    padding: 10px 0;
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .site-header, .container-description {
+    flex-direction: column;
+  }
+
+  #search-input {
+    &::placeholder {
+      text-align: center;
+    }
+
+    /* or, for legacy browsers */
+
+    &::-webkit-input-placeholder {
+      text-align: center;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+      text-align: center;
+    }
+
+    &::-moz-placeholder { /* Firefox 19+ */
+      text-align: center;
+    }
+
+    &:-ms-input-placeholder {
+      text-align: center;
+    }
+  }
+
+  .head-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .site-avatar{
+      flex: 0 0 auto;
+    }
+    .site-header{
+      flex: 1 1 auto;
+    }
+  }
+
+  .wrapper-footer{
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+  }
+  .wrapper-masthead{
+    margin-bottom: 15px;
+  }
+  footer{
+    padding: 10px 0;
+  }
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+  .site-header, .container-description {
+    flex-direction: column;
+  }
+
+  #search-input {
+    &::placeholder {
+      text-align: center;
+    }
+
+    /* or, for legacy browsers */
+
+    &::-webkit-input-placeholder {
+      text-align: center;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+      text-align: center;
+    }
+
+    &::-moz-placeholder { /* Firefox 19+ */
+      text-align: center;
+    }
+
+    &:-ms-input-placeholder {
+      text-align: center;
+    }
+  }
+
+  .head-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .wrapper-footer{
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+  }
+  .wrapper-masthead{
+    margin-bottom: 15px;
+  }
+  footer{
+    padding: 10px 0;
+  }
+}
+
+//По надобности дописую промежуточные разрешения, если вдруг по дизайну что то падает на 650px, тогда дописую:
+
+@media (max-width: 650px) {
+
 }

@@ -19,17 +19,19 @@
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+          <div class="head-container">
+            <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
-          <div class="site-header">
-            <div class="site-info">
-              <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <div class="site-header">
+              <div class="site-info">
+                <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+              </div>
+              <nav>
+                <a href="{{ site.baseurl }}/">Blog</a>
+                <a href="{{ site.baseurl }}/cv/">My CV</a>
+                <a href="{{ site.baseurl }}/about">About</a>
+              </nav>
             </div>
-            <nav>
-              <a href="{{ site.baseurl }}/">Blog</a>
-              <a href="{{ site.baseurl }}/cv/">My CV</a>
-              <a href="{{ site.baseurl }}/about">About</a>
-            </nav>
           </div>
 
           <div class="container-description">
@@ -48,14 +50,13 @@
       </div>
     </div>
 
-    <a class="StandWithUkraine_banner_link" href="https://vshymanskyy.github.io/StandWithUkraine/">
-      <img
-            class="StandWithUkraine_banner_image"
-            src="https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg"
-            title="Stand With Ukraine">
-    </a>
-
     <div id="main" role="main" class="container">
+      <a class="StandWithUkraine_banner_link" href="https://vshymanskyy.github.io/StandWithUkraine/">
+        <img
+                class="StandWithUkraine_banner_image"
+                src="https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg"
+                title="Stand With Ukraine">
+      </a>
       {{ content }}
     </div>
 
