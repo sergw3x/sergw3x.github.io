@@ -29,21 +29,33 @@
   gtag('config', 'G-8YR731DE6G');
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "Person",
-  "name": "Serg",
-  "url": "https://sergw3x.github.io/",
-  "image": "https://avatars.githubusercontent.com/u/20987860?v=4",
-  "sameAs": [
-    "https://www.facebook.com/sergw3x/",
-    "https://www.twitter.com/sergw3x/",
-    "https://www.linkedin.com/in/sergw3x/",
-    "https://github.com/sergw3x",
-    "https://sergw3x.github.io/"
-  ],
-  "jobTitle": "Golang/PHP developer"  
-}
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "{{ site.name }}",
+      "image": "{{ site.avatar }}",
+      "url": "{{ site.baseurl }}",
+      "email": "{{ site.footer-links.email }}",
+      "address": {
+        "@type": "PostalAddress",        
+        "addressLocality": "Kyiv",        
+        "addressCountry": "UA"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "{{ site.name }}",
+        "url": "{{ site.baseurl }}",
+        "image": "{{ site.avatar }}",
+        "email": "{{ site.footer-links.email }}",
+        "jobTitle": "{{ site.description }}",
+        "sameAs": [
+          "https://www.facebook.com/{{ site.footer-links.facebook }}",
+          "https://www.twitter.com/{{ site.footer-links.twitter }}",
+          "https://www.linkedin.com/in/{{ site.footer-links.linkedin }}",
+          "https://github.com/{{ site.footer-links.github }}",
+        ]
+    	}
+    }
 </script>
   <body>
     <div class="wrapper-masthead">
