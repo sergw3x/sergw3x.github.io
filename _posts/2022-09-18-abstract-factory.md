@@ -1,5 +1,6 @@
 ---
-layout: post title: Abstract Factory in Go and PHP 
+layout: post 
+title: Abstract Factory in Go and PHP
 category: Abstract Factory go golang php 
 tags: Abstract Factory go golang php
 ---
